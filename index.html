@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap2Solve - AI-Powered Home Repair Services</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="index.tsx"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="logo">Snap2Solve</a>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#problem" class="nav-link">The Problem</a></li>
+          <li><a href="#why-choose-us" class="nav-link">Our Advantage</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+           <a href="#" class="btn btn-secondary">Login / Signup</a>
+           <a href="#contact" class="btn btn-primary-outline">Book a Technician</a>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container hero-content">
+        <h1>AI-Powered Home Repairs, Solved.</h1>
+        <p>Snap2Solve connects you with verified local technicians for fast, reliable, and stress-free home services.</p>
+        
+        <div class="booking-widget">
+          <form class="booking-form">
+            <div class="form-group">
+              <label for="service-type">I need help with...</label>
+              <select id="service-type" name="service-type">
+                <option value="electrical">Electrical Repairs</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="appliance">Appliance Maintenance</option>
+                <option value="carpentry">Carpentry</option>
+                <option value="cleaning">Home Cleaning</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">In this location...</label>
+              <input type="text" id="location" name="location" placeholder="e.g., Hyderabad">
+            </div>
+            <button type="submit" class="btn btn-primary">Search Technicians</button>
+          </form>
+          <div class="booking-actions">
+            <button type="button" class="btn-action" id="ai-chat-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Chat with AI</span>
+            </button>
+            <button type="button" class="btn-action" id="upload-photo-btn">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              <span>Upload Photo</span>
+            </button>
+            <input type="file" id="photo-upload-input" accept="image/*" style="display: none;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Popular Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h3>Electrical Repairs</h3>
+            <p>Fix wiring, outlets & more.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l.34.29C15.36 5.61 18 8.16 18 11.5c0 3.3-2.7 6-6 6s-6-2.7-6-6c0-3.34 2.64-5.89 5.66-8.52L12 2.69z"></path><path d="M12 22v-2"></path></svg>
+            </div>
+            <h3>Plumbing</h3>
+             <p>Leaky faucets, clogged drains.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"></path><path d="M17.5 7.5a5.5 5.5 0 0 0-11 0"></path><path d="M22 12c0 5.5-4.5 10-10 10S2 17.5 2 12"></path></svg>
+            </div>
+            <h3>Appliance Maintenance</h3>
+             <p>AC, fridge, washing machine.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.28 21.28L2.72 2.72M5 19h14M10 3v2M14 3v2M5.1 8.2l-2.3 2.3M18.9 8.2l2.3 2.3M12 22a7 7 0 0 0-7-7c0-2 1-3.7 2.6-4.9"></path></svg>
+            </div>
+            <h3>Carpentry</h3>
+             <p>Furniture repair, installations.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3>Home Cleaning</h3>
+             <p>Deep cleaning for your home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">How It Works in 4 Easy Steps</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-icon">1</div>
+            <h3>Search</h3>
+            <p>Tell us what service you need and where.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">2</div>
+            <h3>Choose</h3>
+            <p>Select from a list of verified local technicians.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">3</div>
+            <h3>Book</h3>
+            <p>Schedule a time that works for you, instantly.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">4</div>
+            <h3>Pay & Rate</h3>
+            <p>Pay securely online and rate your professional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section problem-section">
+        <div class="container">
+            <h2 class="section-title">Tired of Unreliable Home Services?</h2>
+            <p class="problem-subtitle">You're not alone. The traditional way is broken.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>70%</h3>
+                    <p>Face >24hr Delays</p>
+                </div>
+                <div class="stat-item">
+                    <h3>65%</h3>
+                    <p>Report Overcharging</p>
+                </div>
+                <div class="stat-item">
+                    <h3>60%</h3>
+                    <p>Get Poor Quality Repairs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="why-choose-us" class="section">
+        <div class="container">
+            <h2 class="section-title">The Snap2Solve Advantage</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>AI-Powered Matching</h3>
+                    <p>Our smart AI connects you to the perfect technician for your job, instantly.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Verified Technicians</h3>
+                    <p>Every professional is background-checked and vetted for quality and trust.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Upfront Pricing</h3>
+                    <p>No surprises. Get transparent, upfront quotes before you book the service.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Live Tracking & Chat</h3>
+                    <p>Track your technician in real-time and communicate easily through the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section bg-light">
+      <div class="container about-container">
+        <div class="about-content">
+          <h2 class="section-title">Our Mission</h2>
+          <p>“At Snap2Solve, we make home repair simple, safe, and stress-free by connecting you with trusted professionals instantly.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="rating">★★★★☆</div>
+            <p>"Quick response and a very professional electrician. The issue was fixed in under an hour. Highly recommend!"</p>
+            <h4>- Rohan S.</h4>
+          </div>
+          <div class="testimonial-card">
+            <div class="rating">★★★★★</div>
+            <p>"The booking process was so easy. The plumber was on time, polite, and did a fantastic job. Snap2Solve is a lifesaver!"</p>
+            <h4>- Priya N.</h4>
+          </div>
+          <div class="testimonial-card">
+            <div class="rating">★★★★☆</div>
+            <p>"Used them for appliance servicing. The technician was knowledgeable and fixed my washing machine at a fair price."</p>
+            <h4>- Arjun M.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-container">
+        <div class="contact-info">
+          <h2 class="section-title">Get In Touch</h2>
+          <p>Have a question or need support? Reach out to us.</p>
+          <ul>
+            <li><strong>Email:</strong> support@snap2solve.com</li>
+            <li><strong>Phone:</strong> +91-9876543210</li>
+            <li><strong>Address:</strong> Hyderabad, India</li>
+          </ul>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="social-media">
+        <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      </div>
+      <p>Copyright © 2025 Snap2Solve. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AI Chat Widget -->
+  <div class="chat-widget hidden" id="chat-widget">
+    <div class="chat-header">
+      <h3>AI Assistant</h3>
+      <button class="close-chat" id="close-chat-btn">&times;</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-message bot">
+        <p>Hello! How can I help you diagnose your home repair issue today?</p>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Describe your problem...">
+      <button id="send-chat-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
